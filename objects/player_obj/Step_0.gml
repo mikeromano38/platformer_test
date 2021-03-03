@@ -18,8 +18,13 @@ if (onPlatform) {
 }
 
 // Fatal enemy collisions
-           if (place_meeting(x + hsp, y + vsp, enemy_fatal_base_obj)) {
+if (place_meeting(x + hsp, y + vsp, enemy_fatal_base_obj)) {
 	room_restart();
+}
+
+// Fatal enemy collisions
+if (place_meeting(x + hsp, y + vsp, goal_obj)) {
+	room_goto_next();
 }
             
 // H Collisions
